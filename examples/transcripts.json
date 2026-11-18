@@ -1,0 +1,21 @@
+{
+  "effective_lengths": {
+    "txA": 1000,
+    "txB": 2000
+  },
+  "fragments": [
+    [
+      "txA"
+    ],
+    [
+      "txA"
+    ],
+    [
+      "txB"
+    ],
+    [
+      "txA",
+      "txB"
+    ]
+  ]
+}

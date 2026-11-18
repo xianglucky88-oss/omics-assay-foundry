@@ -1,0 +1,16 @@
+{
+  "sites": [
+    {
+      "id": "cg1",
+      "methylated": 8,
+      "coverage": 10,
+      "region": "r1"
+    },
+    {
+      "id": "cg2",
+      "methylated": 4,
+      "coverage": 10,
+      "region": "r1"
+    }
+  ]
+}

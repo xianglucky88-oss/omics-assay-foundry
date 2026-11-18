@@ -1,0 +1,10 @@
+{
+  "sequence": "GCAU",
+  "minimum_loop": 0,
+  "required_pairs": [
+    [
+      0,
+      1
+    ]
+  ]
+}

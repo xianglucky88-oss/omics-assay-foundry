@@ -1,0 +1,18 @@
+{
+  "tree": {
+    "children": [
+      {
+        "name": "a",
+        "length": 0.1
+      },
+      {
+        "name": "b",
+        "length": 0.2
+      }
+    ]
+  },
+  "sequences": {
+    "a": "ACGT",
+    "b": "AGGT"
+  }
+}

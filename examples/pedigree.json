@@ -1,0 +1,20 @@
+{
+  "allele_frequency": 0.3,
+  "likelihoods": {
+    "father": [
+      1,
+      0,
+      0
+    ],
+    "mother": [
+      0,
+      0,
+      1
+    ],
+    "child": [
+      1,
+      1,
+      1
+    ]
+  }
+}
