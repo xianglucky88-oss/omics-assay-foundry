@@ -1,0 +1,57 @@
+{
+  "sequences": {
+    "a": "AACCGTTTACGA",
+    "b": "AACCGTTTACGA",
+    "c": "GGCCAATTGCAG",
+    "d": "GGCCAATTGCAG"
+  },
+  "candidates": [
+    {
+      "id": "balanced",
+      "tree": {
+        "children": [
+          {
+            "children": [
+              {"name": "a", "length": 0.1},
+              {"name": "b", "length": 0.1}
+            ],
+            "length": 0.1
+          },
+          {
+            "children": [
+              {"name": "c", "length": 0.1},
+              {"name": "d", "length": 0.1}
+            ],
+            "length": 0.1
+          }
+        ]
+      }
+    },
+    {
+      "id": "ladder",
+      "tree": {
+        "children": [
+          {"name": "a", "length": 0.1},
+          {
+            "children": [
+              {"name": "b", "length": 0.1},
+              {
+                "children": [
+                  {"name": "c", "length": 0.1},
+                  {"name": "d", "length": 0.1}
+                ],
+                "length": 0.1
+              }
+            ],
+            "length": 0.1
+          }
+        ]
+      }
+    }
+  ],
+  "partitions": [
+    {"id": "first", "sites": {"start": 0, "end": 6}},
+    {"id": "second", "sites": {"start": 6, "end": 12}}
+  ],
+  "resampling": {"replicates": 100, "seed": 11}
+}
