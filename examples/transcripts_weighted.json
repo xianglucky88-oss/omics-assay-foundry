@@ -1,0 +1,19 @@
+{
+  "transcript_lengths": {
+    "txA": 1200,
+    "txB": 2400,
+    "txC": 900
+  },
+  "fragments": [
+    {"compatible": ["txA"], "length": 200, "count": 4},
+    {"compatible": ["txB"], "length": 260, "count": 2},
+    {"compatible": ["txA", "txB"], "length": 240, "count": 3,
+     "bias": {"txA": 1.0, "txB": 1.5}},
+    {"compatible": ["txC"], "length": 180, "count": 5},
+    {"compatible": ["txB", "txC"], "length": 220, "count": 1}
+  ],
+  "resamples": 200,
+  "seed": 20261119,
+  "chunk_size": 4,
+  "low_abundance_tpm": 10
+}

@@ -1,22 +1,14 @@
-import math
-from ..errors import DomainError
+"""Legacy fixed-length, unbiased-compatibility estimator.
+
+This keeps the original ``/transcripts`` model intact for requests that use
+only ``effective_lengths`` and ``fragments``.  Fragments carry unit relative
+propensity, so allocation is proportional to molecule abundance alone and the
+M-step divides by the fixed effective length.  The extended estimator in
+``model`` reduces to this behaviour when no measurement field is supplied.
+"""
+from .model import estimate as _estimate
 
 def estimate(lengths, compatibility, max_iterations, tolerance):
-    size = len(lengths)
-    abundance = [1/size]*size
-    for iteration in range(1, max_iterations+1):
-        counts = [0.0]*size
-        for members in compatibility:
-            denominator = math.fsum(abundance[i] for i in members)
-            if denominator <= 0:
-                raise DomainError("numeric_failure", "A fragment has no representable supporting abundance")
-            for i in members:
-                counts[i] += abundance[i]/denominator
-        rates = [count/length for count, length in zip(counts, lengths)]
-        total = math.fsum(rates)
-        updated = [rate/total for rate in rates]
-        delta = max(abs(a-b) for a, b in zip(abundance, updated))
-        abundance = updated
-        if delta <= tolerance:
-            return abundance, counts, iteration, True, delta
-    return abundance, counts, max_iterations, False, delta
+    """Return ``(abundance, counts, iterations, converged, maximum_change)``."""
+    rows = [(members, (1.0,)*len(members), 1) for members in compatibility]
+    return _estimate(lengths, rows, max_iterations, tolerance)
