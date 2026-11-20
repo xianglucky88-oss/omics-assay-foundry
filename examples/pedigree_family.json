@@ -1,0 +1,14 @@
+{
+  "allele_frequency": 0.2,
+  "max_states": 500000,
+  "members": [
+    {"id": "ancestor", "ploidy": 2, "likelihoods": [0.05, 0.7, 0.25]},
+    {"id": "paternal_other", "ploidy": 2},
+    {"id": "maternal_other", "ploidy": 2},
+    {"id": "father", "ploidy": 2, "parents": ["ancestor", "paternal_other"]},
+    {"id": "mother", "ploidy": 2, "parents": ["ancestor", "maternal_other"], "likelihoods": [0.1, 0.8, 0.1]},
+    {"id": "sibling_one", "ploidy": 2, "parents": ["father", "mother"], "likelihoods": [0.02, 0.9, 0.08]},
+    {"id": "sibling_two", "ploidy": 2, "parents": ["father", "mother"], "likelihoods": [0.01, 0.85, 0.14]},
+    {"id": "haploid_gamete", "ploidy": 1, "parents": ["father", "mother"], "source_parent": "mother", "likelihoods": [0.2, 0.8]}
+  ]
+}
