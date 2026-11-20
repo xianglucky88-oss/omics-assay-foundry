@@ -1,0 +1,24 @@
+{
+  "controls": [
+    {
+      "id": "lane1-fwd",
+      "batch": "lane1",
+      "strand": "+",
+      "fully_methylated": {"methylated": 197, "coverage": 200},
+      "fully_unmethylated": {"methylated": 3, "coverage": 200}
+    },
+    {
+      "id": "lane1-rev",
+      "batch": "lane1",
+      "strand": "-",
+      "fully_methylated": {"methylated": 178, "coverage": 200},
+      "fully_unmethylated": {"methylated": 5, "coverage": 200}
+    }
+  ],
+  "sites": [
+    {"id": "cg1", "methylated": 8, "coverage": 10, "region": "r1", "batch": "lane1", "strand": "+"},
+    {"id": "cg2", "methylated": 4, "coverage": 10, "region": "r1", "batch": "lane1", "strand": "+"},
+    {"id": "cg3", "methylated": 9, "coverage": 10, "region": "r2", "batch": "lane1", "strand": "-"},
+    {"id": "cg4", "methylated": 0, "coverage": 10, "region": "r2", "batch": "lane1", "strand": "-"}
+  ]
+}
